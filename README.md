@@ -39,9 +39,15 @@ AGD is a project to make it easier to create record in database. In this time, t
 ```shell
 $ node index.js <num>
 ```
-```<num>```: Number of records you want to create.  
+`<num>`: Number of records you want to create.  
 
 ##### Example:
 ```shell
 $ node index.js 10
 ```
+
+## Advanced
+```shell
+mongoexport --csv --host <host>:<port> --db <database> --collection <collection> --fields <field1>,<field2>,<field3>,...  -o <filename>.csv
+```
+###### `***You can use this csv file to import to other database(MySQL, SQLServer, Postgress,...)***`
