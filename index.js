@@ -1,5 +1,4 @@
 var Worker = require("tiny-worker"),
-	curl = require("curl"),
 	axios = require("axios"),
 	mongoose = require("mongoose"),
 	User = require("./model/db.js"),
@@ -20,7 +19,7 @@ function create() {
 				"OfficePhone": r.data["phone"]
 			});
 			u.save(function() {
-				if (i >= (process.argv[2] - 1)) {
+				if (i >= (process.argv[2])) {
 					setTimeout(function() {
 						process.exit();
 					}, 3000);
